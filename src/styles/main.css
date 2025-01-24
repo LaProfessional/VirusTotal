@@ -1,0 +1,36 @@
+html {
+    scrollbar-color: #6275a3 #2f3d5c;
+}
+
+* {
+    font-family: "Kanit", serif;
+}
+
+#root {
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--theme);
+
+    height: 200vh;
+}
+
+h1, h2,
+h3, h4,
+h5, h6 {
+    margin: 0;
+}
+
+input {
+    border: 0;
+    padding: 0;
+}
+input:focus {
+    outline: none;
+}
+
+button {
+    background: transparent;
+    border: none;
+    padding: 0;
+}

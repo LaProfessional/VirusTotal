@@ -1,0 +1,46 @@
+.dark {
+    --theme: #161625;
+
+    --slider: #6275a3;
+    --scroll-bar: #2f3d5c;
+
+    --logo: #86aaf9;
+    --navigation-bar: #2f3d5c;
+    --search-bar: #232c42;
+    --text-placeholder: #7c95b4;
+    --search-icon: #ffffff;
+    --search-icon-hover: #86aaf9;
+    --nav-icons: #c3d2e8;
+    --nav-icons-hover: #7195e1;
+    --separator-nav: #6275a3;
+
+    --button-login-option: #86aaf9;
+
+    --text-sign-in-hover: #86AAF9;
+    --text-sign-up-button: #161625;
+    --text-in-input: #ffffff;
+    --text-color-primary: #ffffff;
+}
+
+.light {
+    --theme: #ffffff;
+
+    --slider: #a6b1c9;
+    --scroll-bar: #eceef4;
+
+    --logo: #86aaf9;
+    --navigation-bar: #eceef4;
+    --search-bar: #f9fafb;
+    --text-placeholder: #ebeaec;
+    --search-icon: #3b3f46;
+    --nav-icons: #363c49;
+    --nav-icons-hover: #0b4dda;
+    --separator-nav: #a6b1c9;
+
+    --button-login-option: #0b4dda;
+
+    --text-sign-in-hover: #084DDA;
+    --text-sign-up-button: #ffffff;
+    --text-in-input: #080808;
+    --text-color-primary: #20242c;
+}

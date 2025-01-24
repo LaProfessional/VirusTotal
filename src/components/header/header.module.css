@@ -1,0 +1,121 @@
+.headerContainer {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    gap: 12px;
+
+    background-color: var(--navigation-bar);
+
+    box-sizing: border-box;
+    padding: 6px 14px 6px 0;
+}
+
+.headerLogo {
+    width: 48px;
+    height: 48px;
+    fill: var(--logo);
+
+    padding-left: 10px;
+}
+
+.headerInputContainer {
+    display: flex;
+    width: 100%;
+}
+
+.btnQuickSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: clamp(20px, 100%, 50px);
+    border-radius: 6px 0 0 6px;
+    background-color: var(--search-bar);
+
+    cursor: pointer;
+}
+.btnQuickSearch:hover path {
+    transition: .15s ease-in-out;
+    fill: var(--search-icon-hover);
+}
+
+.headerInput {
+    width: 100%;
+    height: 30px;
+    border-radius: 0 6px 6px 0;
+
+    background-color: var(--search-bar);
+
+    box-sizing: border-box;
+    padding: 3px 7px 3px 0;
+
+    font-size: 14px;
+    color: var(--text-in-input);
+}
+.headerInput::placeholder {
+    color: var(--text-placeholder);
+}
+
+.headerContainerItems {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.headerContainerItems::before {
+    content: '';
+    border-left: 1px solid var(--separator-nav);
+    height: 25px;
+}
+
+.headerContainerItems::after {
+    content: '';
+    border-right: 1px solid var(--separator-nav);
+    height: 25px;
+}
+
+.headerItem {
+    width: 21px;
+    height: 21px;
+    fill: var(--nav-icons);
+
+    cursor: pointer;
+}
+
+.headerItem:hover {
+    fill: var(--nav-icons-hover);
+}
+
+.loginOption {
+    display: flex;
+    gap: 24px;
+    white-space: nowrap;
+
+    padding-left: 16px;
+}
+
+.signIn {
+    color: var(--text-color-primary);
+    font-size: 14px;
+
+    cursor: pointer;
+}
+.signIn:hover {
+    color: var(--text-sign-in-hover);
+}
+
+.signUp {
+    height: 24px;
+    width: 64px;
+    background-color: var(--button-login-option);
+    border-radius: 700px;
+
+    color: var(--text-sign-up-button);
+    font-size: 14px;
+
+    cursor: pointer;
+}
