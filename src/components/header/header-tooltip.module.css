@@ -1,0 +1,18 @@
+.headerTooltipContainer {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--background-header-tooltip);
+}
+
+.headerTooltip {
+    font-size: 12px;
+    white-space: nowrap;
+
+    padding: 2px 4px;
+}
+
+.hidden {
+    display: none;
+}

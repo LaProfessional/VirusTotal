@@ -11,15 +11,17 @@
     background-color: var(--navigation-bar);
 
     box-sizing: border-box;
-    padding: 6px 14px 6px 0;
+    padding: 6px 14px 6px 10px;
+}
+
+.headerLogoContainer {
+    display: flex;
+    align-items: center;
 }
 
 .headerLogo {
-    width: 48px;
-    height: 48px;
     fill: var(--logo);
-
-    padding-left: 10px;
+    cursor: pointer;
 }
 
 .headerInputContainer {
@@ -38,6 +40,7 @@
 
     cursor: pointer;
 }
+
 .btnQuickSearch:hover path {
     transition: .15s ease-in-out;
     fill: var(--search-icon-hover);
@@ -56,37 +59,40 @@
     font-size: 14px;
     color: var(--text-in-input);
 }
+
 .headerInput::placeholder {
     color: var(--text-placeholder);
 }
 
-.headerContainerItems {
+.headerItemsContainer {
     display: flex;
-    align-items: center;
     gap: 12px;
 }
 
-.headerContainerItems::before {
+.headerItemsContainer::before {
     content: '';
     border-left: 1px solid var(--separator-nav);
     height: 25px;
 }
 
-.headerContainerItems::after {
+.headerItemsContainer::after {
     content: '';
     border-right: 1px solid var(--separator-nav);
     height: 25px;
 }
 
-.headerItem {
-    width: 21px;
-    height: 21px;
-    fill: var(--nav-icons);
+.headerItemContainer {
+    position: relative;
+
+    display: flex;
+    align-items: center;
 
     cursor: pointer;
 }
-
-.headerItem:hover {
+.headerItem {
+    fill: var(--nav-icons);
+}
+.headerItemContainer:hover .headerItem {
     fill: var(--nav-icons-hover);
 }
 
@@ -104,13 +110,14 @@
 
     cursor: pointer;
 }
+
 .signIn:hover {
     color: var(--text-sign-in-hover);
 }
 
 .signUp {
-    height: 24px;
     width: 64px;
+    height: 24px;
     background-color: var(--button-login-option);
     border-radius: 700px;
 
