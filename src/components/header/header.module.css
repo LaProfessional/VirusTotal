@@ -20,7 +20,7 @@
 }
 
 .headerLogo {
-    fill: var(--logo);
+    fill: var(--header-logo);
     cursor: pointer;
 }
 
@@ -40,10 +40,13 @@
 
     cursor: pointer;
 }
-
 .btnQuickSearch:hover path {
     transition: .15s ease-in-out;
     fill: var(--search-icon-hover);
+}
+
+.searchIcon {
+    fill: var(--search-icon);
 }
 
 .headerInput {

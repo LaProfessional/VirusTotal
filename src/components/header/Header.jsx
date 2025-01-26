@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import HeaderTooltip from "./HeaderTooltip";
-import SwitcherTheme from "./SwitcherTheme";
+import ModalWindow from "./ModalWindow";
 import classes from './header.module.css';
 
 import {ReactComponent as HeaderLogo} from "../../assets/header-logo.svg";
@@ -15,6 +15,8 @@ const Header = () => {
 
     const [isTooltipVisible, setTooltipVisible] = useState(null);
     const [themeIcon, setThemeIcon] = useState(<ItemSun className={classes.headerItem}/>);
+    const [modal, setModal] = useState(false);
+    const darkEl = document.querySelector('.dark');
 
     const tooltipData = [
         {icon: <ItemUploadFile className={classes.headerItem}/>, text: "Upload file"},
@@ -45,23 +47,29 @@ const Header = () => {
     };
 
     const clickHandler = index => {
-        if (index === 3) {
+        if (index === 0) {
+            setModal(true);
+        }
 
+        if (index === 3) {
             setThemeIcon(prevIcon => (prevIcon.type === ItemSun ?
                 <ItemMoon className={classes.headerItem}/> :
-                <ItemSun className={classes.headerItem} />));
+                <ItemSun className={classes.headerItem}/>));
+            darkEl.classList.toggle('light');
         }
     }
 
     return (
         <header className={classes.headerContainer}>
+            <ModalWindow visible={modal} setVisible={setModal}/>
+
             <a href="#" className={classes.headerLogoContainer}>
                 <HeaderLogo className={classes.headerLogo}/>
             </a>
 
             <div className={classes.headerInputContainer}>
                 <button className={classes.btnQuickSearch}>
-                    <SearchIcon/>
+                    <SearchIcon class={classes.searchIcon}/>
                 </button>
                 <input
                     type="text"

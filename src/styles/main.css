@@ -11,13 +11,15 @@ html {
     padding: 0;
 
     background-color: var(--theme);
+    transition: .2s ease-in-out;
 
     height: 200vh;
 }
 
 h1, h2,
 h3, h4,
-h5, h6 {
+h5, h6,
+p {
     margin: 0;
 }
 

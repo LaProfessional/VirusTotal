@@ -4,7 +4,7 @@
     --slider: #6275a3;
     --scroll-bar: #2f3d5c;
 
-    --logo: #86aaf9;
+    --header-logo: #86aaf9;
     --navigation-bar: #2f3d5c;
     --search-bar: #232c42;
     --text-placeholder: #7c95b4;
@@ -14,13 +14,21 @@
     --nav-icons-hover: #7195e1;
     --separator-nav: #6275a3;
     --background-header-tooltip: #ebecef;
-
+    --text-header-tooltip: #161625;
     --button-login-option: #86aaf9;
-
     --text-sign-in-hover: #86AAF9;
     --text-sign-up-button: #161625;
     --text-in-input: #ffffff;
     --text-color-primary: #ffffff;
+
+    --background-modal-window: #161625;
+    --scan-file-top: #ffffff;
+    --scan-file-sep: #86aaf9;
+    --scan-file-bottom: #8997b4;
+    --border-btn-choose-file: #86aaf9;
+    --btn-choose-file-hover: #86aaf9;
+    --text-btn-choose-file: #86aaf9;
+    --text-btn-choose-file-hover: #161625;
 }
 
 .light {
@@ -29,20 +37,28 @@
     --slider: #a6b1c9;
     --scroll-bar: #eceef4;
 
-    --logo: #86aaf9;
+    --header-logo: #0b4dda;
     --navigation-bar: #eceef4;
     --search-bar: #f9fafb;
-    --text-placeholder: #ebeaec;
-    --search-icon: #3b3f46;
+    --text-placeholder: #626c84;
+    --search-icon: #363c49;
     --nav-icons: #363c49;
     --nav-icons-hover: #0b4dda;
     --separator-nav: #a6b1c9;
     --background-header-tooltip: #343740;
-
+    --text-header-tooltip: #ffffff;
     --button-login-option: #0b4dda;
-
     --text-sign-in-hover: #084DDA;
     --text-sign-up-button: #ffffff;
-    --text-in-input: #080808;
+    --text-in-input: #161625;
     --text-color-primary: #20242c;
+
+    --background-modal-window: #ffffff;
+    --scan-file-top: #20242c;
+    --scan-file-sep: #0b4dda;
+    --scan-file-bottom: #626c84;
+    --border-btn-choose-file: #0b4dda;
+    --btn-choose-file-hover: #0b4dda;
+    --text-btn-choose-file: #0b4dda;
+    --text-btn-choose-file-hover: #ffffff;
 }

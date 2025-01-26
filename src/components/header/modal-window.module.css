@@ -1,0 +1,70 @@
+.modalWindowContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+
+    display: none;
+
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modalWindowContainer.active {
+    display: block;
+}
+
+.modalWindowContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+
+    width: clamp(200px, 100%, 880px);
+    background-color: var(--background-modal-window);
+
+    box-sizing: border-box;
+    padding: 50px 24px 50px 24px;
+}
+
+.btnChooseFile {
+    border: 1px solid var(--border-btn-choose-file);
+    border-radius: 5px;
+    padding: 7px 42px;
+
+    font-size: 14px;
+    color: var(--text-btn-choose-file);
+
+    transition: all .15s ease-in-out;
+
+    cursor: pointer;
+}
+
+.btnChooseFile:hover {
+    background-color: var(--btn-choose-file-hover);
+    color: var(--text-btn-choose-file-hover);
+}
+
+.userAgreement {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-color-primary);
+
+    padding: 21px;
+}
+
+.consent {
+    color: var(--text-sign-in-hover);
+    text-decoration: none;
+}
+
+.consent:hover {
+    color: var(--text-color-primary);
+}

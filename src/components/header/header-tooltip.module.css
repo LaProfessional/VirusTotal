@@ -5,8 +5,20 @@
     transform: translateX(-50%);
     background-color: var(--background-header-tooltip);
 }
+.headerTooltipContainer::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: var(--background-header-tooltip) transparent;
+}
 
 .headerTooltip {
+    color: var(--text-header-tooltip);
     font-size: 12px;
     white-space: nowrap;
 
