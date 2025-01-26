@@ -7,13 +7,11 @@ const ModalWindow = ({visible, setVisible}) => {
 
     const rootClasses = [classes.modalWindowContainer];
 
-    if (visible) {
-        rootClasses.push(classes.active);
-    }
+    if (visible) rootClasses.push(classes.active);
 
     return (
         <div className={rootClasses.join(' ')} onClick={() => setVisible(false)}>
-            <div className={classes.modalWindowContent} onClick={e => e.stopPropagation()}>
+            <div className={classes.content} onClick={e => e.stopPropagation()}>
                 <ScanFile />
                 <button className={classes.btnChooseFile}>Choose file</button>
                 <p className={classes.userAgreement}>By submitting data above, you are agreeing to our <a href="#" className={classes.consent}>Terms

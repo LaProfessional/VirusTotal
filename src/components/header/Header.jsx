@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import HeaderTooltip from "./HeaderTooltip";
 import ModalWindow from "./ModalWindow";
+import Notifications from "./Notifications";
+
 import classes from './header.module.css';
 
 import {ReactComponent as HeaderLogo} from "../../assets/header-logo.svg";
@@ -16,6 +18,8 @@ const Header = () => {
     const [isTooltipVisible, setTooltipVisible] = useState(null);
     const [themeIcon, setThemeIcon] = useState(<ItemSun className={classes.headerItem}/>);
     const [modal, setModal] = useState(false);
+    const [showNotifications, setShowNotifications] = useState(false);
+
     const darkEl = document.querySelector('.dark');
 
     const tooltipData = [
@@ -48,7 +52,13 @@ const Header = () => {
 
     const clickHandler = index => {
         if (index === 0) {
+            clearTimeout(tooltipTimeout);
             setModal(true);
+        }
+
+        if (index === 1) {
+            clearTimeout(tooltipTimeout);
+            setShowNotifications(true);
         }
 
         if (index === 3) {
@@ -79,6 +89,8 @@ const Header = () => {
             </div>
 
             <div className={classes.headerItemsContainer}>
+                <Notifications visible={showNotifications} setVisible={setShowNotifications} />
+
                 {tooltipData.map((item, index) =>
                     <div
                         key={index}

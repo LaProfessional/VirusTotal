@@ -41,7 +41,7 @@
     cursor: pointer;
 }
 .btnQuickSearch:hover path {
-    transition: .15s ease-in-out;
+    transition: all .15s ease-in-out;
     fill: var(--search-icon-hover);
 }
 

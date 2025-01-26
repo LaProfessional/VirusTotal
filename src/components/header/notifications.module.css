@@ -1,0 +1,79 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+
+    display: none;
+
+    background-color: rgba(0, 0, 0, 0);
+}
+.overlay.active {
+    display: block;
+}
+
+.notificationsContainer {
+    position: absolute;
+    top: 40px;
+    right: 250px;
+
+    width: clamp(100px, 100%, 450px);
+    height: 400px;
+    background-color: var(--text-btn-choose-file-hover);
+    border: 1px solid var(--border-notifications);
+    border-radius: 5px;
+
+    overflow-y: scroll;
+    cursor: pointer;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.content {
+    display: flex;
+
+    color: var(--text-color-primary);
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border-notifications);
+}
+.content:last-child {
+    border-bottom: none;
+}
+
+.content:hover {
+    background-color: var(--scroll-bar);
+}
+
+.header {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.summary {
+    color: var(--text-color-primary);
+    font-size: 12px;
+}
+
+.data {
+    font-size: 12px;
+    color: var(--scan-file-bottom);
+}
+
+.paginationCircleContainer {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.paginationCircle {
+    width: 8px;
+    height: 8px;
+    background-color: var(--scroll-bar);
+    border-radius: 100%;
+}
