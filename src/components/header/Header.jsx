@@ -1,43 +1,44 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import HeaderTooltip from "./HeaderTooltip";
-import ModalWindow from "./ModalWindow";
+import ModalWindow from "../modal-window/ModalWindow";
 import Notifications from "./Notifications";
 
-import classes from './header.module.css';
+import styles from './Header.module.css';
 
-import {ReactComponent as HeaderLogo} from "../../assets/header-logo.svg";
-import {ReactComponent as SearchIcon} from '../../assets/search-icon.svg';
-import {ReactComponent as ItemUploadFile} from "../../assets/upload-file.svg";
-import {ReactComponent as ItemNotifications} from "../../assets/notifications-icon.svg";
-import {ReactComponent as ItemContactSupport} from "../../assets/contact-support.svg";
-import {ReactComponent as ItemSun} from "../../assets/sun.svg";
-import {ReactComponent as ItemMoon} from "../../assets/moon.svg";
+import {ReactComponent as HeaderLogo} from "../../assets/header/header-logo.svg";
+import {ReactComponent as SearchIcon} from '../../assets/header/search-icon.svg';
+import {ReactComponent as ItemUploadFile} from "../../assets/header/upload-file.svg";
+import {ReactComponent as ItemNotifications} from "../../assets/header/notifications-icon.svg";
+import {ReactComponent as ItemContactSupport} from "../../assets/header/contact-support.svg";
+import {ReactComponent as ItemSun} from "../../assets/header/sun.svg";
+import {ReactComponent as ItemMoon} from "../../assets/header/moon.svg";
 
 const Header = () => {
 
     const [isTooltipVisible, setTooltipVisible] = useState(null);
-    const [themeIcon, setThemeIcon] = useState(<ItemSun className={classes.headerItem}/>);
+    const [themeIcon, setThemeIcon] = useState(<ItemSun className={styles.headerItem}/>);
     const [modal, setModal] = useState(false);
     const [showNotifications, setShowNotifications] = useState(false);
 
     const darkEl = document.querySelector('.dark');
 
     const tooltipData = [
-        {icon: <ItemUploadFile className={classes.headerItem}/>, text: "Upload file"},
-        {icon: <ItemNotifications className={classes.headerItem}/>, text: "View notifications"},
-        {icon: <ItemContactSupport className={classes.headerItem}/>, text: "Contact support"},
+        {icon: <ItemUploadFile className={styles.headerItem}/>, text: "Upload file"},
+        {icon: <ItemNotifications className={styles.headerItem}/>, text: "View notifications"},
+        {icon: <ItemContactSupport className={styles.headerItem}/>, text: "Contact support"},
         {icon: themeIcon, text: null},
     ];
 
-    let tooltipTimeout;
+    const tooltipTimeout = useRef();
+
     const showTooltip = index => {
-        tooltipTimeout = setTimeout(() => {
+        tooltipTimeout.current = setTimeout(() => {
             setTooltipVisible(index);
         }, 200);
     };
 
     const hideTooltip = () => {
-        clearTimeout(tooltipTimeout);
+        clearTimeout(tooltipTimeout.current);
         setTooltipVisible(null);
     };
 
@@ -52,43 +53,41 @@ const Header = () => {
 
     const clickHandler = index => {
         if (index === 0) {
-            clearTimeout(tooltipTimeout);
             setModal(true);
         }
 
         if (index === 1) {
-            clearTimeout(tooltipTimeout);
             setShowNotifications(true);
         }
 
         if (index === 3) {
             setThemeIcon(prevIcon => (prevIcon.type === ItemSun ?
-                <ItemMoon className={classes.headerItem}/> :
-                <ItemSun className={classes.headerItem}/>));
+                <ItemMoon className={styles.headerItem}/> :
+                <ItemSun className={styles.headerItem}/>));
             darkEl.classList.toggle('light');
         }
     }
 
     return (
-        <header className={classes.headerContainer}>
+        <header className={styles.headerContainer}>
             <ModalWindow visible={modal} setVisible={setModal}/>
 
-            <a href="#" className={classes.headerLogoContainer}>
-                <HeaderLogo className={classes.headerLogo}/>
+            <a href="#" className={styles.headerLogoContainer}>
+                <HeaderLogo className={styles.headerLogo}/>
             </a>
 
-            <div className={classes.headerInputContainer}>
-                <button className={classes.btnQuickSearch}>
-                    <SearchIcon class={classes.searchIcon}/>
+            <div className={styles.headerInputContainer}>
+                <button className={styles.btnQuickSearch}>
+                    <SearchIcon className={styles.searchIcon}/>
                 </button>
                 <input
                     type="text"
-                    className={classes.headerInput}
+                    className={styles.headerInput}
                     placeholder={'URL, IP address, domain or file hash'}
                 />
             </div>
 
-            <div className={classes.headerItemsContainer}>
+            <div className={styles.headerItemsContainer}>
                 <Notifications visible={showNotifications} setVisible={setShowNotifications} />
 
                 {tooltipData.map((item, index) =>
@@ -98,19 +97,19 @@ const Header = () => {
                         onMouseLeave={hideTooltip}
                         onClick={() => clickHandler(index)}
 
-                        className={classes.headerItemContainer}
+                        className={styles.headerItemContainer}
                     >{item.icon}
                         {renderTooltip(item, index)}
                     </div>
                 )}
             </div>
 
-            <div className={classes.loginOption}>
+            <div className={styles.loginOption}>
                 <a href="#">
-                    <button className={classes.signIn}>Sign in</button>
+                    <button className={styles.signIn}>Sign in</button>
                 </a>
                 <a href="#">
-                    <button className={classes.signUp}>Sign up</button>
+                    <button className={styles.signUp}>Sign up</button>
                 </a>
             </div>
         </header>

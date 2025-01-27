@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './header-tooltip.module.css';
+import classes from './Header-tooltip.module.css';
 
 const HeaderTooltip = ({children, isVisible}) => {
     return (

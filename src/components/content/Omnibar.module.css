@@ -1,0 +1,73 @@
+.navTab {
+    width: clamp(50px, 100%, 160px);
+
+    text-align: center;
+    color: var(--nav-icons);
+    font-size: 14px;
+
+    padding: 14px 28px;
+
+    transition: color .15s ease-in-out;
+
+    cursor: pointer;
+}
+.navTab:hover {
+    color: var(--header-logo);
+}
+
+.active {
+    color: var(--header-logo);
+    border-bottom: 3px solid var(--header-logo);
+}
+
+.omnibar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: clamp(100px, 100%, 700px);
+    gap: 24px;
+
+    padding: 42px;
+}
+
+.omnibarInput {
+    width: clamp(100px, 100%, 600px);
+    height: 38px;
+
+    background-color: var(--text-header-tooltip);
+    border: 1px solid var(--separator-nav);
+    border-radius: 6px;
+
+    color: var(--text-color-primary);
+
+    box-sizing: border-box;
+    padding: 7px;
+
+    transition: border .15s ease-in-out;
+}
+.omnibarInput::placeholder {
+    color: var(--separator-nav);
+}
+.omnibarInput:hover {
+    border: var(--text-color-primary);
+    border: 1px solid var(--text-color-primary);
+}
+.omnibarInput:focus {
+    border: 1px solid var(--header-logo);
+}
+
+.description {
+    width: clamp(100px, 100%, 400px);
+
+    text-align: center;
+    color: var(--text-color-primary);
+    font-size: 14px;
+}
+.description a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--header-logo);
+}
+.description a:hover {
+    color: var(--link-tip-hover);
+}

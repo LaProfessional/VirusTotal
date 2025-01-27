@@ -1,0 +1,81 @@
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 48px;
+
+    box-sizing: border-box;
+    padding: 42px;
+}
+
+.logo {
+    fill: var(--header-logo);
+}
+
+.about {
+    width: clamp(100px, 100%, 500px);
+
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-color-primary);
+}
+
+.omnibarContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tabsWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: clamp(100px, 100%, 700px);
+    height: 50px;
+
+    border-bottom: 1px solid var(--border-notifications);
+}
+
+.automate {
+    align-self: center;
+    fill: var(--text-color-primary);
+
+    padding: 0 14px;
+
+    transition: all .15s ease-in-out;
+
+    cursor: pointer;
+}
+.automate:hover {
+    fill: var(--header-logo);
+}
+
+
+.tipContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(100px, 100%, 700px);
+    gap: 4px;
+
+    background-color: var(--search-bar);
+
+    padding: 4px 0;
+}
+
+.important {
+    fill: var(--text-color-primary);
+}
+
+.tip {
+    font-size: 14px;
+    color: var(--text-color-primary);
+}
+.tip a {
+    color: var(--header-logo);
+    text-decoration: none;
+}
+.tip a:hover {
+    color: var(--link-tip-hover);
+}

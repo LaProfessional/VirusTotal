@@ -1,10 +1,12 @@
 import Header from "./components/header/Header";
+import Content from "./components/content/Content";
 
 const App = () => {
 
     return (
         <>
-            <Header></Header>
+            <Header />
+                <Content />
 
         </>
     );

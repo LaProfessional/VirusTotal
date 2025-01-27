@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './notifications.module.css';
+import styles from './Notifications.module.css';
 
 const Notifications = ({visible, setVisible}) => {
 
@@ -50,27 +50,27 @@ const Notifications = ({visible, setVisible}) => {
             time: '2 years ago',
         }
     ];
-    const rootClasses = [classes.overlay];
+    const rootClasses = [styles.overlay];
 
-    if (visible) rootClasses.push(classes.active);
+    if (visible) rootClasses.push(styles.active);
 
     return (
         <div className={rootClasses.join(' ')} onClick={() => setVisible(false)}>
-            <section className={classes.notificationsContainer} onClick={e => e.stopPropagation()}>
+            <section className={styles.notificationsContainer} onClick={e => e.stopPropagation()}>
                 {notificationsData.map((item, index) =>
                     <article
                         key={index}
-                        className={classes.content}>
+                        className={styles.content}>
 
 
                         <div>
-                            <h4 className={classes.header}>{item.header}</h4>
-                            <p className={classes.summary}>{item.content}</p>
-                            <time className={classes.data}>{item.time}</time>
+                            <h4 className={styles.header}>{item.header}</h4>
+                            <p className={styles.summary}>{item.content}</p>
+                            <time className={styles.data}>{item.time}</time>
                         </div>
 
-                        <div className={classes.paginationCircleContainer}>
-                            <div className={classes.paginationCircle}></div>
+                        <div className={styles.paginationCircleContainer}>
+                            <div className={styles.paginationCircle}></div>
                         </div>
                     </article>
                 )}

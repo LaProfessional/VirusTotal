@@ -31,6 +31,8 @@
     --text-btn-choose-file-hover: #161625;
 
     --border-notifications: #3d4a69;
+
+    --link-tip-hover: #b6ccfb;
 }
 
 .light {
@@ -65,4 +67,6 @@
     --text-btn-choose-file-hover: #ffffff;
 
     --border-notifications: #e5e9f0;
+
+    --link-tip-hover: #062b79;
 }

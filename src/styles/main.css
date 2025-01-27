@@ -12,8 +12,6 @@ html {
 
     background-color: var(--theme);
     transition: .2s ease-in-out;
-
-    height: 200vh;
 }
 
 h1, h2,
@@ -34,5 +32,11 @@ input:focus {
 button {
     background: transparent;
     border: none;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
     padding: 0;
 }
