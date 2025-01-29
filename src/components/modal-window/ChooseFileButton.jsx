@@ -9,7 +9,6 @@ const ChooseFileButton = () => {
     const tooltipTimeout = useRef();
     const showTooltip = () => {
         tooltipTimeout.current = setTimeout(() => {
-            console.log('dsaf')
             setVisibleTooltip(true);
         }, 200);
     };

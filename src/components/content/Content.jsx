@@ -13,24 +13,10 @@ import {ReactComponent as Important} from "../../assets/omnibar/important.svg";
 const Content = () => {
 
     const [activeTab, setActiveTab] = useState('FILE');
-    const [currentTab, setCurrentTab] = useState(<FileTab/>);
     const [isVisibleTooltip, setVisibleTooltip] = useState(null);
 
-    const tabs = ['FILE', 'URL', 'SEARCH'];
-    const dataTabs = [
-        {tab: <FileTab/>},
-        {tab: <UrlTab/>},
-        {tab: <SearchTab/>},
-    ];
-
     const handlerTabClick = tabName => {
-        const selectedTab = tabs.find(tab => tab === tabName);
-
-        if (selectedTab) {
-            setActiveTab(tabName);
-            const selectedTabIndex = tabs.indexOf(tabName);
-            setCurrentTab(dataTabs[selectedTabIndex].tab);
-        }
+        setActiveTab(tabName);
     };
 
     const tooltipTimeout = useRef();
@@ -69,7 +55,9 @@ const Content = () => {
                         className={styles.automate}/>
                 </ul>
 
-                {currentTab}
+                {activeTab === 'FILE' && <FileTab/>}
+                {activeTab === 'URL' && <UrlTab/>}
+                {activeTab === 'SEARCH' && <SearchTab/>}
 
                 <div className={styles.tipContainer}>
                     <Important className={styles.important}/>
