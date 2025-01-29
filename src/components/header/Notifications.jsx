@@ -62,7 +62,6 @@ const Notifications = ({visible, setVisible}) => {
                         key={index}
                         className={styles.content}>
 
-
                         <div>
                             <h4 className={styles.header}>{item.header}</h4>
                             <p className={styles.summary}>{item.content}</p>

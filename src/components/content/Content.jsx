@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import styles from './Content.module.css';
 
 import Tab from './Tab';
@@ -14,6 +14,7 @@ const Content = () => {
 
     const [activeTab, setActiveTab] = useState('FILE');
     const [currentTab, setCurrentTab] = useState(<FileTab/>);
+    const [isVisibleTooltip, setVisibleTooltip] = useState(null);
 
     const tabs = ['FILE', 'URL', 'SEARCH'];
     const dataTabs = [
@@ -32,17 +33,40 @@ const Content = () => {
         }
     };
 
+    const tooltipTimeout = useRef();
+    const showTooltip = () => {
+        tooltipTimeout.current = setTimeout(() => {
+            setVisibleTooltip(true);
+        }, 200);
+    };
+
+    const hideTooltip = () => {
+        clearTimeout(tooltipTimeout.current);
+        setVisibleTooltip(null);
+    }
+
     return (
         <div className={styles.content}>
             <Logo className={styles.logo}/>
             <p className={styles.about}>Analyse suspicious files, domains, IPs and URLs to detect malware and other
-                breaches, automatically share them with the security community.</p>
+                breaches, automatically share them with the security community.
+            </p>
+
             <div className={styles.omnibarContainer}>
                 <ul className={styles.tabsWrapper}>
                     <Tab isActive={activeTab === 'FILE'} handlerTabClick={handlerTabClick}>FILE</Tab>
                     <Tab isActive={activeTab === 'URL'} handlerTabClick={handlerTabClick}>URL</Tab>
                     <Tab isActive={activeTab === 'SEARCH'} handlerTabClick={handlerTabClick}>SEARCH</Tab>
-                    <Automate className={styles.automate}/>
+
+                    <div className={`${styles.tooltipContainer} ${isVisibleTooltip ? '' : styles.hidden}`}>
+                        <div className={styles.tooltip}>Automate</div>
+                    </div>
+
+                    <Automate
+                        onMouseEnter={showTooltip}
+                        onMouseLeave={hideTooltip}
+
+                        className={styles.automate}/>
                 </ul>
 
                 {currentTab}

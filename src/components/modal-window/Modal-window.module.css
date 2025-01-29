@@ -68,3 +68,36 @@
 .consent:hover {
     color: var(--text-color-primary);
 }
+
+.tooltipContainer {
+    position: relative;
+}
+.tooltipContainer.hidden {
+    display: none;
+}
+
+.tooltip {
+    position: absolute;
+    right: -105px;
+    top: -30px;
+
+    background-color: var(--background-header-tooltip);
+    border-radius: 3px;
+
+    color: var(--text-header-tooltip);
+    font-size: 12px;
+
+    padding: 2px 4px;
+}
+.tooltip::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: 5px solid transparent;
+    border-right: 5px solid var(--background-header-tooltip);
+}
+

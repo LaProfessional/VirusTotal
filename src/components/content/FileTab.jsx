@@ -1,4 +1,3 @@
-import React from 'react';
 import Omnibar from "./Omnibar";
 
 import ChooseFileButton from "../modal-window/ChooseFileButton";
