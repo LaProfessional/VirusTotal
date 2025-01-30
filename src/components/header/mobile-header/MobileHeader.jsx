@@ -1,5 +1,9 @@
-import React, {use, useState} from 'react';
+import React, {useState} from 'react';
 import styles from './Mobile-header.module.css';
+
+import DropDownMenu from "./DropDownMenu";
+import SearchBar from "./SearchBar";
+import DropDownContent from "./DropDownContent";
 
 import {ReactComponent as BurgerMenu} from "../../../assets/header/burger-menu.svg";
 import {ReactComponent as Grid} from "../../../assets/header/grid.svg";
@@ -11,57 +15,52 @@ const MobileHeader = () => {
     const [isDropDownMenu, setIsDropDownMenu] = useState(false);
     const [overlay, setOverlay] = useState(false);
 
-    const openDropDownMenu = () => {
-        setOverlay(true);
-        setIsDropDownMenu(true);
-    };
+    const [openSearchBar, setOpenSearchBar] = useState(false);
 
-    const closeDropDownMenu = () => {
-        setIsDropDownMenu(false);
-        setTimeout(() => {
-            setOverlay(false);
-        }, 300);
-    };
+    const [openDropDownContent, setopenDropDownContent] = useState(false);
 
     return (
         <header className={styles.headerContainer}>
             <div
                 className={`${styles.overlay} ${overlay ? styles.show : ''}`}
-                onClick={closeDropDownMenu}
-            ></div>
-
-            <BurgerMenu className={styles.burgerMenu} onClick={openDropDownMenu}/>
-            <div
-                onClick={closeDropDownMenu}
-                className={`${styles.dropDownMenu} ${isDropDownMenu ? styles.open : ''}`}
-            >
-
-                <div className={styles.signInBox}>
-                    <p>Log in to your account</p>
-                    <button className={styles.signInBtn}>Sign in</button>
-                </div>
-
-                <ul>
-                    <li>
-                        <a href="#" className={styles.link}>New? Join the community</a>
-                    </li>
-                    <li>
-                        <a href="#" className={styles.link}>Forgot password</a>
-                    </li>
-                    <li>
-                        <a href="#" className={styles.link}>Documentation</a>
-                    </li>
-                </ul>
+                onClick={() => {
+                    setIsDropDownMenu(false);
+                    setTimeout(() => {
+                        setOverlay(false);
+                    }, 300);
+                }}>
             </div>
+
+            <BurgerMenu className={styles.burgerMenu} onClick={() => {
+                setIsDropDownMenu(true);
+                setOverlay(true);
+            }}/>
+
+            <DropDownMenu isDropDownMenu={isDropDownMenu}
+                          setIsDropDownMenu={setIsDropDownMenu}
+                          setOverlay={setOverlay}
+            />
 
             <Logo className={styles.logo}/>
 
             <div className={styles.actions}>
-                <Search className={styles.search}/>
-                <Grid className={styles.grid}/>
+                <Search className={styles.search}
+                        onClick={() => setOpenSearchBar(true)}
+                />
+                <Grid className={styles.grid}
+                      onClick={() => setopenDropDownContent(true)}
+                />
             </div>
 
+            <SearchBar
+                openSearchBar={openSearchBar}
+                setOpenSearchBar={setOpenSearchBar}
+            />
 
+            <DropDownContent
+                openDropDownContent={openDropDownContent}
+                setOpenDropDownContent={setopenDropDownContent}
+            />
         </header>
     );
 };

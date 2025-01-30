@@ -35,6 +35,8 @@
     --link-tip-hover: #b6ccfb;
 
     --mobie-link-header: #8997b4;
+    --mobile-icon-nav: #576175;
+    --background-mobile-nav: #242431;
 }
 
 .light {
@@ -72,4 +74,7 @@
 
     --link-tip-hover: #062b79;
     --mobie-link-header: #626c84;
+
+    --mobile-icon-nav: #c7ccd6;
+    --background-mobile-nav: #f5f5f5;
 }
