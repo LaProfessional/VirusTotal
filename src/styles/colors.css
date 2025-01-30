@@ -33,6 +33,8 @@
     --border-notifications: #3d4a69;
 
     --link-tip-hover: #b6ccfb;
+
+    --mobie-link-header: #8997b4;
 }
 
 .light {
@@ -69,4 +71,5 @@
     --border-notifications: #e5e9f0;
 
     --link-tip-hover: #062b79;
+    --mobie-link-header: #626c84;
 }
