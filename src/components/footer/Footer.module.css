@@ -71,3 +71,9 @@
     color: var(--header-logo);
     font-weight: 500;
 }
+
+@media screen and (max-width: 1024px) {
+
+
+
+}
