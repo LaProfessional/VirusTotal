@@ -2,7 +2,7 @@
     width: clamp(50px, 100%, 160px);
 
     text-align: center;
-    color: var(--nav-icons);
+    color: var(--color-icon-nav);
     font-size: 14px;
 
     padding: 14px 28px;
@@ -12,12 +12,12 @@
     cursor: pointer;
 }
 .navTab:hover {
-    color: var(--header-logo);
+    color: var(--highlight-color-primary);
 }
 
 .active {
-    color: var(--header-logo);
-    border-bottom: 3px solid var(--header-logo);
+    color: var(--highlight-color-primary);
+    border-bottom: 3px solid var(--highlight-color-primary);
 }
 
 .omnibar {
@@ -27,15 +27,15 @@
     width: clamp(100px, 100%, 700px);
     gap: 24px;
 
-    padding: 42px;
+    padding: 42px 0;
 }
 
 .omnibarInput {
     width: clamp(100px, 100%, 600px);
     height: 38px;
 
-    background-color: var(--text-header-tooltip);
-    border: 1px solid var(--separator-nav);
+    background-color: var(--text-color-secondary);
+    border: 1px solid var(--dividing-line);
     border-radius: 6px;
 
     color: var(--text-color-primary);
@@ -46,14 +46,14 @@
     transition: border .15s ease-in-out;
 }
 .omnibarInput::placeholder {
-    color: var(--separator-nav);
+    color: var(--dividing-line);
 }
 .omnibarInput:hover {
     border: var(--text-color-primary);
     border: 1px solid var(--text-color-primary);
 }
 .omnibarInput:focus {
-    border: 1px solid var(--header-logo);
+    border: 1px solid var(--highlight-color-primary);
 }
 
 .description {
@@ -66,10 +66,10 @@
 .description a {
     text-decoration: none;
     text-transform: uppercase;
-    color: var(--header-logo);
+    color: var(--highlight-color-primary);
 }
 .description a:hover {
-    color: var(--link-tip-hover);
+    color: var(--hover-footer-link);
 }
 
 @media screen and (max-width: 768px) {

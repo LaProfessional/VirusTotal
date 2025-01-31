@@ -32,7 +32,7 @@ const Content = () => {
     }
 
     return (
-        <div className={styles.content}>
+        <div className={styles.contentContainer}>
             <Logo className={styles.logo}/>
             <p className={styles.about}>Analyse suspicious files, domains, IPs and URLs to detect malware and other
                 breaches, automatically share them with the security community.

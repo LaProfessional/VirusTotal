@@ -18,7 +18,7 @@
 .footerContainer::before {
     display: flex;
     content: '';
-    border-top: 1px solid var(--border-notifications);
+    border-top: 1px solid var(--color-notifications-border);
     width: 100%;
 }
 
@@ -39,7 +39,7 @@
     margin-bottom: 10px;
 }
 .header:hover {
-    color: var(--header-logo);
+    color: var(--highlight-color-primary);
 }
 
 .linkContainer {
@@ -64,11 +64,11 @@
     line-height: 1.7;
 }
 .footerLink:hover {
-    color: var(--header-logo);
+    color: var(--highlight-color-primary);
 }
 
 .highlightedLink {
-    color: var(--header-logo);
+    color: var(--highlight-color-primary);
     font-weight: 500;
 }
 

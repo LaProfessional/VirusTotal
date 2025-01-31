@@ -1,80 +1,55 @@
 .dark {
-    --theme: #161625;
+    --hover-footer-link: #b6ccfb;
 
-    --slider: #6275a3;
-    --scroll-bar: #2f3d5c;
+    --highlight-color-primary: #86aaf9;
+    --highlight-color-secondary: #ffffff;
 
-    --header-logo: #86aaf9;
-    --navigation-bar: #2f3d5c;
-    --search-bar: #232c42;
-    --text-placeholder: #7c95b4;
-    --search-icon: #ffffff;
-    --search-icon-hover: #86aaf9;
-    --nav-icons: #c3d2e8;
-    --nav-icons-hover: #7195e1;
-    --separator-nav: #6275a3;
-    --background-header-tooltip: #ebecef;
-    --text-header-tooltip: #161625;
-    --button-login-option: #86aaf9;
-    --text-sign-in-hover: #86AAF9;
-    --text-sign-up-button: #161625;
-    --text-in-input: #ffffff;
     --text-color-primary: #ffffff;
+    --text-color-secondary: #161625;
+    --text-color-in-input: #ffffff;
+    --text-color-placeholder: #7c95b4;
+    --text-color-link: #8997b4;
 
-    --background-modal-window: #161625;
-    --scan-file-top: #ffffff;
-    --scan-file-sep: #86aaf9;
-    --scan-file-bottom: #8997b4;
-    --border-btn-choose-file: #86aaf9;
-    --btn-choose-file-hover: #86aaf9;
-    --text-btn-choose-file: #86aaf9;
-    --text-btn-choose-file-hover: #161625;
+    --color-bg-primary: #161625;
+    --color-bg-secondary: #2f3d5c;
+    --bg-search-bar: #232c42;
 
-    --border-notifications: #3d4a69;
+    --dividing-line: #6275a3;
 
-    --link-tip-hover: #b6ccfb;
+    --color-icon-nav: #c3d2e8;
+    --hover-nav-icon: #7195e1;
+    --color-bg-mobile-nav: #242431;
+    --mobile-icon-nav-color: #576175;
 
-    --mobie-link-header: #8997b4;
-    --mobile-icon-nav: #576175;
-    --background-mobile-nav: #242431;
+    --color-notifications-border: #3d4a69;
+
+    --color-bg-tooltip: #ebecef;
 }
 
 .light {
-    --theme: #ffffff;
+    --highlight-color-primary: #0b4dda;
+    --highlight-color-secondary: #363c49;
 
-    --slider: #a6b1c9;
-    --scroll-bar: #eceef4;
-
-    --header-logo: #0b4dda;
-    --navigation-bar: #eceef4;
-    --search-bar: #f9fafb;
-    --text-placeholder: #626c84;
-    --search-icon: #363c49;
-    --nav-icons: #363c49;
-    --nav-icons-hover: #0b4dda;
-    --separator-nav: #a6b1c9;
-    --background-header-tooltip: #343740;
-    --text-header-tooltip: #ffffff;
-    --button-login-option: #0b4dda;
-    --text-sign-in-hover: #084DDA;
-    --text-sign-up-button: #ffffff;
-    --text-in-input: #161625;
     --text-color-primary: #20242c;
+    --text-color-secondary: #ffffff;
+    --text-color-in-input: #161625;
+    --text-color-placeholder: #626c84;
+    --text-color-link: #626c84;
 
-    --background-modal-window: #ffffff;
-    --scan-file-top: #20242c;
-    --scan-file-sep: #0b4dda;
-    --scan-file-bottom: #626c84;
-    --border-btn-choose-file: #0b4dda;
-    --btn-choose-file-hover: #0b4dda;
-    --text-btn-choose-file: #0b4dda;
-    --text-btn-choose-file-hover: #ffffff;
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #eceef4;
+    --bg-search-bar: #f9fafb;
 
-    --border-notifications: #e5e9f0;
+    --dividing-line: #a6b1c9;
 
-    --link-tip-hover: #062b79;
-    --mobie-link-header: #626c84;
+    --color-icon-nav: #363c49;
+    --hover-nav-icon: #0b4dda;
+    --color-bg-mobile-nav: #f5f5f5;
+    --mobile-icon-nav-color: #c7ccd6;
 
-    --mobile-icon-nav: #c7ccd6;
-    --background-mobile-nav: #f5f5f5;
+    --color-notifications-border: #e5e9f0;
+
+    --color-bg-tooltip: #343740;
+
+    --hover-footer-link: #062b79;
 }

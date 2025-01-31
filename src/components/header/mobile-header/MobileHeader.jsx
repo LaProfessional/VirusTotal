@@ -12,54 +12,52 @@ import {ReactComponent as Logo} from "../../../assets/content/logo.svg";
 
 const MobileHeader = () => {
 
-    const [isDropDownMenu, setIsDropDownMenu] = useState(false);
-    const [overlay, setOverlay] = useState(false);
-
-    const [openSearchBar, setOpenSearchBar] = useState(false);
-
-    const [openDropDownContent, setOpenDropDownContent] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [isDropDownOpen, setIsDropDownOpen] = useState(false);
 
     return (
         <header className={styles.headerContainer}>
             <div
-                className={`${styles.overlay} ${overlay ? styles.show : ''}`}
+                className={`${styles.overlay} ${isOverlayVisible ? styles.show : ''}`}
                 onClick={() => {
-                    setIsDropDownMenu(false);
+                    setIsMenuOpen(false);
                     setTimeout(() => {
-                        setOverlay(false);
+                        setIsOverlayVisible(false);
                     }, 300);
                 }}>
             </div>
 
             <BurgerMenu className={styles.burgerMenu} onClick={() => {
-                setIsDropDownMenu(true);
-                setOverlay(true);
+                setIsMenuOpen(true);
+                setIsOverlayVisible(true);
             }}/>
 
-            <DropDownMenu isDropDownMenu={isDropDownMenu}
-                          setIsDropDownMenu={setIsDropDownMenu}
-                          setOverlay={setOverlay}
+            <DropDownMenu isMenuOpen={isMenuOpen}
+                          setIsMenuOpen={setIsMenuOpen}
+                          isOverlayVisible={isOverlayVisible}
             />
 
             <Logo className={styles.logo}/>
 
             <div className={styles.actions}>
                 <Search className={styles.search}
-                        onClick={() => setOpenSearchBar(true)}
+                        onClick={() => setIsSearchOpen(true)}
                 />
                 <Grid className={styles.grid}
-                      onClick={() => setOpenDropDownContent(true)}
+                      onClick={() => setIsDropDownOpen(true)}
                 />
             </div>
 
             <SearchBar
-                openSearchBar={openSearchBar}
-                setOpenSearchBar={setOpenSearchBar}
+                isSearchOpen={isSearchOpen}
+                setIsSearchOpen={setIsSearchOpen}
             />
 
             <DropDownContent
-                openDropDownContent={openDropDownContent}
-                setOpenDropDownContent={setOpenDropDownContent}
+                isDropDownOpen={isDropDownOpen}
+                setIsDropDownOpen={setIsDropDownOpen}
             />
         </header>
     );

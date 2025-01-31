@@ -8,7 +8,7 @@
     height: 50px;
     gap: 12px;
 
-    background-color: var(--navigation-bar);
+    background-color: var(--color-bg-secondary);
 
     box-sizing: border-box;
     padding: 6px 14px 6px 10px;
@@ -20,7 +20,7 @@
 }
 
 .logo {
-    fill: var(--header-logo);
+    fill: var(--highlight-color-primary);
     cursor: pointer;
 }
 
@@ -36,17 +36,17 @@
 
     width: clamp(20px, 100%, 50px);
     border-radius: 6px 0 0 6px;
-    background-color: var(--search-bar);
+    background-color: var(--bg-search-bar);
 
     cursor: pointer;
 }
 .btnQuickSearch:hover path {
     transition: all .15s ease-in-out;
-    fill: var(--search-icon-hover);
+    fill: var(--highlight-color-primary);
 }
 
 .searchIcon {
-    fill: var(--search-icon);
+    fill: var(--highlight-color-secondary);
 }
 
 .headerInput {
@@ -54,17 +54,17 @@
     height: 30px;
     border-radius: 0 6px 6px 0;
 
-    background-color: var(--search-bar);
+    background-color: var(--bg-search-bar);
 
     box-sizing: border-box;
     padding: 3px 7px 3px 0;
 
     font-size: 14px;
-    color: var(--text-in-input);
+    color: var(--text-color-in-input);
 }
 
 .headerInput::placeholder {
-    color: var(--text-placeholder);
+    color: var(--text-color-placeholder);
 }
 
 .headerItemsContainer {
@@ -74,12 +74,12 @@
 }
 .headerItemsContainer::before {
     content: '';
-    border-left: 1px solid var(--separator-nav);
+    border-left: 1px solid var(--dividing-line);
     height: 25px;
 }
 .headerItemsContainer::after {
     content: '';
-    border-right: 1px solid var(--separator-nav);
+    border-right: 1px solid var(--dividing-line);
     height: 25px;
 }
 
@@ -91,10 +91,10 @@
     cursor: pointer;
 }
 .headerItem {
-    fill: var(--nav-icons);
+    fill: var(--color-icon-nav);
 }
 .headerItemContainer:hover .headerItem {
-    fill: var(--nav-icons-hover);
+    fill: var(--hover-nav-icon);
 }
 
 .loginOption {
@@ -113,29 +113,27 @@
 }
 
 .signIn:hover {
-    color: var(--text-sign-in-hover);
+    color: var(--highlight-color-primary);
 }
 
 .signUp {
     width: 64px;
     height: 24px;
-    background-color: var(--button-login-option);
+    background-color: var(--highlight-color-primary);
     border-radius: 700px;
 
-    color: var(--text-sign-up-button);
+    color: var(--text-color-secondary);
     font-size: 14px;
 
     cursor: pointer;
 }
-
-
 
 .tooltipContainer {
     position: absolute;
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--background-header-tooltip);
+    background-color: var(--color-bg-tooltip);
     border-radius: 3px;
 
     pointer-events: none;
@@ -148,11 +146,11 @@
     transform: translateX(-50%);
 
     border: 5px solid transparent;
-    border-bottom: 5px solid var(--background-header-tooltip);
+    border-bottom: 5px solid var(--color-bg-tooltip);
 }
 
 .tooltip {
-    color: var(--text-header-tooltip);
+    color: var(--text-color-secondary);
     font-size: 12px;
     white-space: nowrap;
 

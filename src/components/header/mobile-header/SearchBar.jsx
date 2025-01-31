@@ -4,22 +4,22 @@ import styles from './Mobile-header.module.css';
 import {ReactComponent as CloseIcon} from "../../../assets/header/icon-close.svg";
 import {ReactComponent as Search} from "../../../assets/header/search-icon.svg";
 
-const SearchBar = ({openSearchBar, setOpenSearchBar}) => {
+const SearchBar = ({isSearchOpen, setIsSearchOpen}) => {
 
     const inputRef = useRef(null);
 
     useEffect(() => {
-        if (openSearchBar && inputRef.current) {
+        if (isSearchOpen && inputRef.current) {
             inputRef.current.focus();
         }
-    }, [openSearchBar]);
+    }, [isSearchOpen]);
 
     const closeSearchBar = () => {
-        setOpenSearchBar(false);
+        setIsSearchOpen(false);
     }
 
     return (
-        <div className={`${styles.searchBarContainer} ${openSearchBar ? styles.open : ''}`}>
+        <div className={`${styles.searchBarContainer} ${isSearchOpen ? styles.open : ''}`}>
             <CloseIcon className={styles.closeIcon}
                        onClick={closeSearchBar}
             />

@@ -21,8 +21,8 @@
 
     width: clamp(100px, 100%, 450px);
     height: 400px;
-    background-color: var(--text-btn-choose-file-hover);
-    border: 1px solid var(--border-notifications);
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-notifications-border);
     border-radius: 5px;
 
     overflow-y: scroll;
@@ -40,14 +40,14 @@
 
     color: var(--text-color-primary);
     padding: 12px 14px;
-    border-bottom: 1px solid var(--border-notifications);
+    border-bottom: 1px solid var(--color-notifications-border);
 }
 .content:last-child {
     border-bottom: none;
 }
 
 .content:hover {
-    background-color: var(--scroll-bar);
+    background-color: var(--color-bg-secondary);
 }
 
 .header {
@@ -62,7 +62,7 @@
 
 .data {
     font-size: 12px;
-    color: var(--scan-file-bottom);
+    color: var(--color-notifications-border);
 }
 
 .paginationCircleContainer {
@@ -74,6 +74,6 @@
 .paginationCircle {
     width: 8px;
     height: 8px;
-    background-color: var(--scroll-bar);
+    background-color: var(--color-bg-secondary);
     border-radius: 100%;
 }

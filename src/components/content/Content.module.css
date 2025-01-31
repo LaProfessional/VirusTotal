@@ -1,4 +1,4 @@
-.content {
+.contentContainer {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -10,7 +10,7 @@
 }
 
 .logo {
-    fill: var(--header-logo);
+    fill: var(--highlight-color-primary);
 }
 
 .about {
@@ -34,7 +34,7 @@
     width: clamp(100px, 100%, 700px);
     height: 50px;
 
-    border-bottom: 1px solid var(--border-notifications);
+    border-bottom: 1px solid var(--color-notifications-border);
 }
 
 .tooltipContainer {
@@ -49,10 +49,10 @@
     top: -20px;
     left: -4px;
 
-    background-color: var(--background-header-tooltip);
+    background-color: var(--color-bg-tooltip);
     border-radius: 3px;
 
-    color: var(--text-header-tooltip);
+    color: var(--text-color-secondary);
     font-size: 12px;
 
     padding: 2px 4px;
@@ -65,7 +65,7 @@
     transform: translateX(-50%);
 
     border: 5px solid transparent;
-    border-top: 5px solid var(--background-header-tooltip);
+    border-top: 5px solid var(--color-bg-tooltip);
 }
 
 .automate{
@@ -77,7 +77,7 @@
     cursor: pointer;
 }
 .automate:hover {
-    fill: var(--header-logo);
+    fill: var(--highlight-color-primary);
 }
 
 .tipContainer {
@@ -87,7 +87,7 @@
     width: clamp(100px, 100%, 700px);
     gap: 4px;
 
-    background-color: var(--search-bar);
+    background-color: var(--bg-search-bar);
 
     padding: 4px 4px;
 }
@@ -101,16 +101,16 @@
     color: var(--text-color-primary);
 }
 .tip a {
-    color: var(--header-logo);
+    color: var(--highlight-color-primary);
     text-decoration: none;
 }
 .tip a:hover {
-    color: var(--link-tip-hover);
+    color: var(--hover-footer-link);
 }
 
 @media screen and (max-width: 768px) {
 
-    .content {
+    .contentContainer {
         padding: 22px;
     }
 

@@ -10,7 +10,7 @@ import {ReactComponent as Vtgraph} from "../../../assets/header/vtgraph.svg";
 import {ReactComponent as Vthunting} from "../../../assets/header/vthunting.svg";
 import {ReactComponent as Vtintelligence} from "../../../assets/header/vtintelligence.svg";
 
-const DropDownContent = ({openDropDownContent, setOpenDropDownContent}) => {
+const DropDownContent = ({isDropDownOpen, setIsDropDownOpen}) => {
 
     const dataMenuItems = [
         {icon: <Vtapi className={styles.iconNav}/>, title: 'Vtapi'},
@@ -22,15 +22,15 @@ const DropDownContent = ({openDropDownContent, setOpenDropDownContent}) => {
     ];
 
     const ref = useRef();
-    useOnClickOutside(ref, () => setOpenDropDownContent(false));
+    useOnClickOutside(ref, () => setIsDropDownOpen(false));
 
     const closeDropDownContent = () => {
-        setOpenDropDownContent(false);
+        setIsDropDownOpen(false);
     };
 
     return (
         <div ref={ref}
-            className={`${styles.contentContainer} ${openDropDownContent ? styles.open : ''}`}>
+            className={`${styles.contentContainer} ${isDropDownOpen ? styles.open : ''}`}>
             <div className={styles.titleContainer}>
                 <CloseIcon className={`${styles.closeIcon} ${styles.positionCloseIcon}`}
                     onClick={closeDropDownContent}

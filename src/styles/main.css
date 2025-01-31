@@ -10,7 +10,7 @@ html {
     margin: 0;
     padding: 0;
 
-    background-color: var(--theme);
+    background-color: var(--color-bg-primary);
     transition: .2s ease-in-out;
 }
 

@@ -1,9 +1,9 @@
 import styles from './Mobile-header.module.css';
 
-const DropDownMenu = ({isDropDownMenu}) => {
+const DropDownMenu = ({isMenuOpen}) => {
     return (
         <div
-            className={`${styles.dropDownMenu} ${isDropDownMenu ? styles.open : ''}`}
+            className={`${styles.dropDownMenu} ${isMenuOpen ? styles.open : ''}`}
         >
 
             <div className={styles.signInBox}>

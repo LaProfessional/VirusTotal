@@ -28,19 +28,19 @@
     gap: 24px;
 
     width: clamp(200px, 100%, 880px);
-    background-color: var(--background-modal-window);
+    background-color: var(--color-bg-primary);
 
     box-sizing: border-box;
     padding: 50px 24px 50px 24px;
 }
 
 .btnChooseFile {
-    border: 1px solid var(--border-btn-choose-file);
+    border: 1px solid var(--highlight-color-primary);
     border-radius: 5px;
     padding: 7px 42px;
 
     font-size: 14px;
-    color: var(--text-btn-choose-file);
+    color: var(--highlight-color-primary);
 
     transition: all .15s ease-in-out;
 
@@ -48,8 +48,8 @@
 }
 
 .btnChooseFile:hover {
-    background-color: var(--btn-choose-file-hover);
-    color: var(--text-btn-choose-file-hover);
+    background-color: var(--highlight-color-primary);
+    color: var(--text-color-secondary);
 }
 
 .userAgreement {
@@ -61,7 +61,7 @@
 }
 
 .consent {
-    color: var(--text-sign-in-hover);
+    color: var(--highlight-color-primary);
     text-decoration: none;
 }
 
@@ -81,10 +81,10 @@
     right: -105px;
     top: -30px;
 
-    background-color: var(--background-header-tooltip);
+    background-color: var(--color-bg-tooltip);
     border-radius: 3px;
 
-    color: var(--text-header-tooltip);
+    color: var(--text-color-secondary);
     font-size: 12px;
 
     padding: 2px 4px;
@@ -98,7 +98,7 @@
     transform: translateY(-50%);
 
     border: 5px solid transparent;
-    border-right: 5px solid var(--background-header-tooltip);
+    border-right: 5px solid var(--color-bg-tooltip);
 }
 
 @media screen and (max-width: 768px) {
