@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/VirusTotal/static/css/main.b4d2ed21.css",
-    "main.js": "/VirusTotal/static/js/main.69aa6c63.js",
+    "main.css": "/VirusTotal/static/css/main.9ee6a6aa.css",
+    "main.js": "/VirusTotal/static/js/main.b6f38521.js",
     "static/media/search.svg": "/VirusTotal/static/media/search.6dc2bd57bfc8cfd4a4c2bd627a6e1e89.svg",
     "static/media/private-scanning.svg": "/VirusTotal/static/media/private-scanning.2abd7d1ef569037c5a20ac63a8386409.svg",
     "static/media/scan-file.svg": "/VirusTotal/static/media/scan-file.7d47439ac02eb8c8055444ea8d324d90.svg",
@@ -25,11 +25,11 @@
     "static/media/burger-menu.svg": "/VirusTotal/static/media/burger-menu.32b40cb0d7f2c8e56ca6c16a9c970ea1.svg",
     "static/media/icon-close.svg": "/VirusTotal/static/media/icon-close.2b59e3d5de068517338e1d85e2f76dc4.svg",
     "static/media/header-logo.svg": "/VirusTotal/static/media/header-logo.328ca7bbb6a7ff56f70cd5c1f2031366.svg",
-    "main.b4d2ed21.css.map": "/VirusTotal/static/css/main.b4d2ed21.css.map",
-    "main.69aa6c63.js.map": "/VirusTotal/static/js/main.69aa6c63.js.map"
+    "main.9ee6a6aa.css.map": "/VirusTotal/static/css/main.9ee6a6aa.css.map",
+    "main.b6f38521.js.map": "/VirusTotal/static/js/main.b6f38521.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4d2ed21.css",
-    "static/js/main.69aa6c63.js"
+    "static/css/main.9ee6a6aa.css",
+    "static/js/main.b6f38521.js"
   ]
 }
