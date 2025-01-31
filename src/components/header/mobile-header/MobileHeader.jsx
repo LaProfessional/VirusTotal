@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styles from './Mobile-header.module.css';
+import styles from './MobileHeader.module.css';
 
 import DropDownMenu from "./DropDownMenu";
 import SearchBar from "./SearchBar";

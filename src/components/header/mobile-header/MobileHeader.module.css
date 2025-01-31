@@ -40,6 +40,8 @@
     .burgerMenu {
         fill: var(--text-color-primary);
         padding: 5px;
+
+        cursor: pointer;
     }
 
     .dropDownMenu {
@@ -115,6 +117,8 @@
 
         fill: var(--text-color-primary);
         padding: 5px;
+
+        cursor: pointer;
     }
     .search:hover {
         fill: var(--highlight-color-primary);
@@ -171,6 +175,8 @@
     .grid {
         fill: var(--text-color-primary);
         padding: 5px;
+
+        cursor: pointer;
     }
 
     .contentContainer {

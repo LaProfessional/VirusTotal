@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import styles from './Mobile-header.module.css';
+import styles from './MobileHeader.module.css';
 import useOnClickOutside from "../../hooks/useOnClickOutside";
 
 import {ReactComponent as CloseIcon} from "../../../assets/header/icon-close.svg";

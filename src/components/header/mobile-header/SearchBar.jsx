@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-import styles from './Mobile-header.module.css';
+import styles from './MobileHeader.module.css';
 
 import {ReactComponent as CloseIcon} from "../../../assets/header/icon-close.svg";
 import {ReactComponent as Search} from "../../../assets/header/search-icon.svg";

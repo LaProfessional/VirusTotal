@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Modal-window.module.css';
+import styles from './ModalWindow.module.css';
 
 const UserAgreement = () => {
     return (

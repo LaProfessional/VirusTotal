@@ -3,7 +3,7 @@ html {
 }
 
 * {
-    font-family: "Kanit", serif;
+    font-family: "Kanit", sans-serif;
 }
 
 #root {
@@ -28,6 +28,7 @@ input {
 input:focus {
     outline: none;
 }
+
 
 button {
     background: transparent;
