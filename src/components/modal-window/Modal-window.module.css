@@ -101,3 +101,14 @@
     border-right: 5px solid var(--background-header-tooltip);
 }
 
+@media screen and (max-width: 768px) {
+
+    .userAgreement {
+        padding: 0;
+    }
+
+    .tooltipContainer {
+        display: none;
+    }
+
+}

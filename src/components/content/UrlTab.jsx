@@ -7,6 +7,9 @@ import {ReactComponent as Web} from "../../assets/omnibar/web.svg";
 import UserAgreement from "../modal-window/UserAgreement";
 
 const UrlTab = () => {
+
+
+
     return (
         <Omnibar>
             <Web/>

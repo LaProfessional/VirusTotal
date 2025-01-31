@@ -1,4 +1,3 @@
-import React from 'react';
 import style from './Omnibar.module.css';
 
 import Omnibar from "./Omnibar";

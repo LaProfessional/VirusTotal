@@ -89,7 +89,7 @@
 
     background-color: var(--search-bar);
 
-    padding: 4px 0;
+    padding: 4px 4px;
 }
 
 .important {
@@ -106,4 +106,40 @@
 }
 .tip a:hover {
     color: var(--link-tip-hover);
+}
+
+@media screen and (max-width: 768px) {
+
+    .content {
+        padding: 22px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .about {
+        display: none;
+    }
+
+    .omnibarContainer {
+        width: clamp(100px, 100%, 470px);
+    }
+
+    .tabsWrapper {
+        width: clamp(100px, 100%, 470px);
+    }
+
+    .automate {
+        display: none;
+    }
+
+    .tipContainer {
+        width: clamp(100px, 100%, 500px);
+    }
+
+    .important {
+        display: none;
+    }
+
 }

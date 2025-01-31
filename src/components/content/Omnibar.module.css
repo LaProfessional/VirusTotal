@@ -72,3 +72,14 @@
     color: var(--link-tip-hover);
 }
 
+@media screen and (max-width: 768px) {
+
+    .navTab {
+        width: clamp(50px, 100%, 100px);
+    }
+
+    .omnibar {
+        padding: 42px 0;
+    }
+
+}
