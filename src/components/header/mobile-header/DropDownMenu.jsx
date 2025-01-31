@@ -1,21 +1,6 @@
 import styles from './Mobile-header.module.css';
-import {useRef, useState} from "react";
 
-const DropDownMenu = ({isDropDownMenu, setIsDropDownMenu, setOverlay}) => {
-
-    // const isAnimating = useRef(false);
-
-    // const closeDropDownMenu = () => {
-    //     if (isAnimating.current) return;
-    //     isAnimating.current = true;
-    //
-    //     setIsDropDownMenu(false);
-    //     setTimeout(() => {
-    //         setOverlay(false);
-    //         isAnimating.current = false;
-    //     }, 300);
-    // };
-
+const DropDownMenu = ({isDropDownMenu}) => {
     return (
         <div
             className={`${styles.dropDownMenu} ${isDropDownMenu ? styles.open : ''}`}

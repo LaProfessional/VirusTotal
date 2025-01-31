@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import styles from './Mobile-header.module.css';
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 
 import {ReactComponent as CloseIcon} from "../../../assets/header/icon-close.svg";
 import {ReactComponent as PrivateScanning} from "../../../assets/header/private-scanning.svg";
@@ -20,12 +21,16 @@ const DropDownContent = ({openDropDownContent, setOpenDropDownContent}) => {
         {icon: <PrivateScanning className={styles.iconNav}/>, title: 'PrivateScanning'},
     ];
 
+    const ref = useRef();
+    useOnClickOutside(ref, () => setOpenDropDownContent(false));
+
     const closeDropDownContent = () => {
         setOpenDropDownContent(false);
     };
 
     return (
-        <div className={`${styles.contentContainer} ${openDropDownContent ? styles.open : ''}`}>
+        <div ref={ref}
+            className={`${styles.contentContainer} ${openDropDownContent ? styles.open : ''}`}>
             <div className={styles.titleContainer}>
                 <CloseIcon className={`${styles.closeIcon} ${styles.positionCloseIcon}`}
                     onClick={closeDropDownContent}

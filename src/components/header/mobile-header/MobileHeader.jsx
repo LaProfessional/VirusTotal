@@ -17,7 +17,7 @@ const MobileHeader = () => {
 
     const [openSearchBar, setOpenSearchBar] = useState(false);
 
-    const [openDropDownContent, setopenDropDownContent] = useState(false);
+    const [openDropDownContent, setOpenDropDownContent] = useState(false);
 
     return (
         <header className={styles.headerContainer}>
@@ -48,7 +48,7 @@ const MobileHeader = () => {
                         onClick={() => setOpenSearchBar(true)}
                 />
                 <Grid className={styles.grid}
-                      onClick={() => setopenDropDownContent(true)}
+                      onClick={() => setOpenDropDownContent(true)}
                 />
             </div>
 
@@ -59,7 +59,7 @@ const MobileHeader = () => {
 
             <DropDownContent
                 openDropDownContent={openDropDownContent}
-                setOpenDropDownContent={setopenDropDownContent}
+                setOpenDropDownContent={setOpenDropDownContent}
             />
         </header>
     );
