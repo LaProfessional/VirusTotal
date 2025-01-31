@@ -1,26 +1,35 @@
 {
   "files": {
-    "main.css": "/VirusTotal/static/css/main.bfdc3763.css",
-    "main.js": "/VirusTotal/static/js/main.9bbe82d7.js",
+    "main.css": "/VirusTotal/static/css/main.7780d981.css",
+    "main.js": "/VirusTotal/static/js/main.85f0aa9f.js",
     "static/media/search.svg": "/VirusTotal/static/media/search.55c7ff26861d45d54d01a071873ad268.svg",
+    "static/media/private-scanning.svg": "/VirusTotal/static/media/private-scanning.2abd7d1ef569037c5a20ac63a8386409.svg",
     "static/media/scan-file.svg": "/VirusTotal/static/media/scan-file.674a0520faae364dc2508fa207a507cf.svg",
+    "static/media/grid.svg": "/VirusTotal/static/media/grid.1f956f91fd4be6cd552a4d72b770b087.svg",
     "static/media/web.svg": "/VirusTotal/static/media/web.6c86b8f40717bef2e4e1739a4d4dd9b4.svg",
     "static/media/logo.svg": "/VirusTotal/static/media/logo.16e7f732c077d9361a8f78b726be32e8.svg",
     "static/media/contact-support.svg": "/VirusTotal/static/media/contact-support.36900d71e7c38364910ed88ba6da56ec.svg",
+    "static/media/vtgraph.svg": "/VirusTotal/static/media/vtgraph.a3806ae4dc4beff7791b45d35913d8a6.svg",
     "static/media/important.svg": "/VirusTotal/static/media/important.f0f718c1c9ab5b20875b0536a54867c1.svg",
     "static/media/sun.svg": "/VirusTotal/static/media/sun.6614a9faada8ba837dbceed306877a6e.svg",
     "static/media/moon.svg": "/VirusTotal/static/media/moon.b89ccd46a2790bac156000c2f574ad59.svg",
+    "static/media/vtintelligence.svg": "/VirusTotal/static/media/vtintelligence.37ad246044ecc514254901c81141aa1f.svg",
     "index.html": "/VirusTotal/index.html",
     "static/media/search-icon.svg": "/VirusTotal/static/media/search-icon.39397b7feb35545d869d53e617a2ad06.svg",
     "static/media/automate.svg": "/VirusTotal/static/media/automate.259dedda329de0a7306c6e4ade1f83c4.svg",
+    "static/media/vtapi.svg": "/VirusTotal/static/media/vtapi.0864432fb8f3d1a1d2ffa5cff1361d66.svg",
     "static/media/notifications-icon.svg": "/VirusTotal/static/media/notifications-icon.3f614c6dba57a0afca9b7dd519cbc562.svg",
     "static/media/upload-file.svg": "/VirusTotal/static/media/upload-file.0f93f0f06b472d7f84c32de835680d47.svg",
+    "static/media/threat-landscape.svg": "/VirusTotal/static/media/threat-landscape.82707639c8d3247d0dab8f91bc62d7b2.svg",
+    "static/media/vthunting.svg": "/VirusTotal/static/media/vthunting.45ba80393a946916c43373c2e3d49dbf.svg",
+    "static/media/burger-menu.svg": "/VirusTotal/static/media/burger-menu.32b40cb0d7f2c8e56ca6c16a9c970ea1.svg",
+    "static/media/icon-close.svg": "/VirusTotal/static/media/icon-close.2b59e3d5de068517338e1d85e2f76dc4.svg",
     "static/media/header-logo.svg": "/VirusTotal/static/media/header-logo.322efd1225627082ae9b8d66db251446.svg",
-    "main.bfdc3763.css.map": "/VirusTotal/static/css/main.bfdc3763.css.map",
-    "main.9bbe82d7.js.map": "/VirusTotal/static/js/main.9bbe82d7.js.map"
+    "main.7780d981.css.map": "/VirusTotal/static/css/main.7780d981.css.map",
+    "main.85f0aa9f.js.map": "/VirusTotal/static/js/main.85f0aa9f.js.map"
   },
   "entrypoints": [
-    "static/css/main.bfdc3763.css",
-    "static/js/main.9bbe82d7.js"
+    "static/css/main.7780d981.css",
+    "static/js/main.85f0aa9f.js"
   ]
 }
