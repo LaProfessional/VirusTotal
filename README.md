@@ -1,1 +1,1 @@
-https://topttedhbiu-dejlbfuh4uk.github.io/VirusTotal/
+https://laprofessional.github.io/VirusTotal/
