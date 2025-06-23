@@ -1,1 +1,1 @@
-[Website](https://laprofessional.github.io/VirusTotal/)
+[VirusTotal](https://laprofessional.github.io/VirusTotal/)
